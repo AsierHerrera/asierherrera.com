@@ -1,14 +1,33 @@
 /* Typewriter.module.css */
 .typewriter {
-    display: inline-block;
-    overflow: hidden; /* Ensures the text container hides the overflowed text */
-    white-space: nowrap; /* Keeps the text in a single line */
-    border-right: 2px solid #68d372; /* Adds a blinking cursor effect */
-    animation: blink-caret 0.75s step-end infinite;
+    display: inline-block; /* Permite que el contenedor del texto sea en línea */
+    position: relative; /* Posiciona el cursor correctamente */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    font-size: 1em; /* Ajusta el tamaño de la fuente según sea necesario */
+    white-space: pre-wrap; /* Permite saltos de línea y espacios en blanco */
+    word-wrap: break-word; /* Permite que las palabras largas se ajusten a nuevas líneas */
+    overflow-wrap: break-word; /* Compatibilidad con navegadores modernos */
   }
   
+  .cursor {
+    display: inline-block;
+    position: absolute; /* Posiciona el cursor al final del texto */
+    right: 0; /* Alinea el cursor al final del texto */
+    top: 0;
+    bottom: 0; /* Alinea verticalmente el cursor con el texto */
+    width: 0.1em; /* Ajusta el tamaño del cursor */
+    opacity: 1; /* Inicialmente visible */
+    animation: blink-caret 0.75s step-end infinite; /* Aplica la animación de parpadeo */
+    transition: opacity 0.4s ease-in-out; /* Transición suave para la opacidad */
+  }
+  
+  /* Define la animación del cursor */
   @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #68d372; }
+    0%, 100% {
+      opacity: 0; /* Invisible al principio y al final */
+    }
+    50% {
+      opacity: 1; /* Visible a mitad de animación */
+    }
   }
   

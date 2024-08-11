@@ -42,7 +42,10 @@ const Typewriter = ({ texts, speed = 100, deleteSpeed = 50, pause = 1000 }) => {
   }, [displayedText, isDeleting, pause]);
 
   return (
-    <span className={styles.typewriter}>{displayedText}</span>
+    <span className={styles.typewriter}>
+      {displayedText}
+      <div className={styles.cursor}>|</div>
+    </span>
   );
 };
 
