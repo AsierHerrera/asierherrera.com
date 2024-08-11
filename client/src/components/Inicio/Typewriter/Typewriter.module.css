@@ -1,0 +1,14 @@
+/* Typewriter.module.css */
+.typewriter {
+    display: inline-block;
+    overflow: hidden; /* Ensures the text container hides the overflowed text */
+    white-space: nowrap; /* Keeps the text in a single line */
+    border-right: 2px solid #68d372; /* Adds a blinking cursor effect */
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #68d372; }
+  }
+  
