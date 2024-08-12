@@ -15,16 +15,33 @@
 }
 
 h1 {
-    font-size: 4em;
-    font-weight: 800; /* Incrementa el grosor del texto */
+    font-size: 5em;
+    font-weight: 1000; /* Incrementa el grosor del texto */
     margin-bottom: 0; /* Elimina el margen inferior */
+    user-select: none;
 }
 
 .name {
     color: #68d372;
     font-size: 1.5em;
     font-weight: 800; /* Incrementa el grosor del texto */
+    user-select: none;
+    position: relative; /* Necesario para posicionar ::before */
 }
+
+.myName::before {
+    content: "";
+    width: 130px;
+    height: 3px;
+    display: block;
+    background-color: #68d372;
+    position: absolute;
+    top: 30%; /* Ajusta esta posición según sea necesario */
+    transform: translateY(-50%); /* Centra verticalmente la línea */
+    left: -140px; /* Ajusta la distancia según sea necesario */
+}
+
+
 
 /* Contenedor para Typewriter con altura fija */
 .typewriterWrapper {
@@ -42,6 +59,7 @@ h1 {
     white-space: nowrap; /* Evita el salto de línea dentro del elemento */
     margin: 0; /* Asegúrate de eliminar cualquier margen que pueda afectar el espaciado */
     overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+    user-select: none;
 }
 
 .description {
@@ -49,8 +67,10 @@ h1 {
     line-height: 1.6;
     color: #6e6e6ebb;
     margin-bottom: 30px;
+    margin-top: 0;
     overflow: hidden; /* Esto evita que el texto que sobresale se muestre */
     font-weight: normal !important; /* Asegúrate de que el texto no esté en negrita */
+    user-select: none;
 }
 
 .introP {

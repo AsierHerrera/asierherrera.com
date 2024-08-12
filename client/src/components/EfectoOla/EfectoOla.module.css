@@ -1,0 +1,29 @@
+.waveContainer {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Aumenta la altura para asegurar que la ola completa se muestre */
+    overflow: visible; /* Asegura que cualquier contenido que sobresalga del contenedor sea visible */
+    background-color: #222222; /* Fondo oscuro */
+  }
+  
+  .svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wavePath {
+    animation: waveAnimation 4s ease-in-out infinite;
+  }
+  
+  @keyframes waveAnimation {
+    0% {
+      d: path("M0,100 C360,200 720,-200 1440,100 V200 H0 Z");
+    }
+    50% {
+      d: path("M0,100 C360,-200 720,200 1440,100 V200 H0 Z");
+    }
+    100% {
+      d: path("M0,100 C360,200 720,-200 1440,100 V200 H0 Z");
+    }
+  }

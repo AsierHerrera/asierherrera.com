@@ -1,0 +1,9 @@
+.container {
+    width: 100%; /* Ocupa todo el ancho del viewport */
+    height: 100vh; /* Opcional: Ocupa toda la altura del viewport, ajusta según tus necesidades */
+    background-color: white; /* Fondo blanco */
+    box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho y alto */
+    padding: 0; /* Asegura que no haya padding adicional */
+    margin: 0; /* Asegura que no haya margin adicional */
+  }
+  

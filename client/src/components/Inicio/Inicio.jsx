@@ -13,15 +13,18 @@ function Inicio() {
         <div className={styles.container}>
             {/* Contenedor de Texto */}
             <div className={styles.textContainer}>
-                <h1>
-                    Hi, I am <br />
-                    <span className={styles.name}>Asier,</span> <br />
-                </h1>
+            <h1>
+                Hi, I am <br />
+                <span className={`${styles.name} ${styles.myName}`}>
+                    Asier,
+                </span> <br />
+            </h1>
+
                 <div className={styles.typewriterWrapper}>
                     <Typewriter texts={texts} speed={100} deleteSpeed={50} pause={1000} className={styles.role} />
                 </div>
                 <p className={styles.description}>
-                    Welcome to my portfolio! <span className={styles.introP}>Asier Herrera</span> is an <span className={styles.introP}>Experienced </span> <span className={styles.introP}>Full Stack Developer </span> with a passion for creating
+                    Welcome to my portfolio! <span className={styles.introP}>Asier Herrera</span> is an <span className={styles.introP}>Experienced </span> <span className={styles.introP}>Full Stack Developer </span> with a passion for creating 
                     <span className={styles.introP}> visually stunning</span> and <span className={styles.introP}>intuitive</span> web experiences. With a <span className={styles.introP}>unique</span> blend of technical skills and creative flair,
                     there's <span className={styles.introP}>confidence</span> in the ability to deliver <span className={styles.introP}>custom solutions</span> to various project requirements.
                 </p>
