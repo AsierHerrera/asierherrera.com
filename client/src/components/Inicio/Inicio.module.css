@@ -17,6 +17,7 @@
 h1 {
     font-size: 4em;
     font-weight: 800; /* Incrementa el grosor del texto */
+    margin-bottom: 0; /* Elimina el margen inferior */
 }
 
 .name {
@@ -24,6 +25,7 @@ h1 {
     font-size: 1.5em;
     font-weight: 800; /* Incrementa el grosor del texto */
 }
+
 /* Contenedor para Typewriter con altura fija */
 .typewriterWrapper {
     height: 200px;
@@ -42,57 +44,20 @@ h1 {
     overflow: hidden; /* Asegúrate de que el contenido no se desborde */
 }
 
-
 .description {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #cccccc;
+    color: #6e6e6ebb;
     margin-bottom: 30px;
     overflow: hidden; /* Esto evita que el texto que sobresale se muestre */
-
+    font-weight: normal !important; /* Asegúrate de que el texto no esté en negrita */
 }
 
-.buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.resumeButton,
-.contactButton {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.contactButton {
-    background-color: transparent;
-    border: 2px solid #4caf50;
-}
-
-.resumeButton:hover,
-.contactButton:hover {
-    background-color: #45a049;
-    color: white;
-}
-
-.imageContainer {
-    width: 45%;
-    height: 100%;
-    background-image: url('./path-to-your-image.png');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Clase para texto animado */
 .introP {
-    font-weight: bold;
+    font-weight: bold; /* Aplica negrita al texto con esta clase */
     display: inline-block;
     transition: color 0.4s ease-in-out;
+    color: #6E6E6E;
 }
 
 .introP:hover {
@@ -125,3 +90,63 @@ h1 {
     }
 }
 
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cvDownload {
+    color: #ffffff;
+    border: none;
+    background-color: #68d372;
+    padding: 15px 80px; /* Aumenta el padding para hacer el botón más grande */
+    border-radius: 6px; /* Aumenta el radio del borde para un botón más grande y redondeado */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea más negrita */
+    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
+}
+
+.contactButton {
+    color: #ffffff;
+    border: 2px solid #68d372;
+    background-color: transparent;
+    padding: 15px 80px; /* Asegura que el padding sea el mismo que el botón cvDownload */
+    border-radius: 6px; /* Aumenta el radio del borde para un botón más grande y redondeado */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea más negrita */
+    width: auto; /* Ajusta el ancho al contenido */
+    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
+    background-image: linear-gradient(to right, #68d372 50%, transparent 50%); /* Gradiente para la transición */
+    background-size: 200% 100%; /* Doble tamaño para la transición */
+    background-position: right bottom; /* Inicialmente el gradiente está a la derecha */
+    transition: background-position 0.3s ease-in-out; /* Transición de la posición del gradiente */
+}
+
+.contactButton:hover {
+    background-position: left bottom; /* Cambia la posición del gradiente al pasar el ratón */
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: white; /* Asegúrate de que el icono sea blanco */
+}
+
+.contactButton:hover .icon {
+    color: white; /* Mantén el color blanco del icono al pasar el ratón */
+}
+
+.imageContainer {
+    width: 45%;
+    height: 100%;
+    background-image: url('./path-to-your-image.png');
+    background-size: cover;
+    background-position: center;
+}

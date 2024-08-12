@@ -1,33 +1,32 @@
-/* Typewriter.module.css */
 .typewriter {
-    display: inline-block; /* Permite que el contenedor del texto sea en línea */
-    position: relative; /* Posiciona el cursor correctamente */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    font-size: 1em; /* Ajusta el tamaño de la fuente según sea necesario */
-    white-space: pre-wrap; /* Permite saltos de línea y espacios en blanco */
-    word-wrap: break-word; /* Permite que las palabras largas se ajusten a nuevas líneas */
-    overflow-wrap: break-word; /* Compatibilidad con navegadores modernos */
-  }
-  
-  .cursor {
-    display: inline-block;
-    position: absolute; /* Posiciona el cursor al final del texto */
-    right: 0; /* Alinea el cursor al final del texto */
-    top: 0;
-    bottom: 0; /* Alinea verticalmente el cursor con el texto */
-    width: 0.1em; /* Ajusta el tamaño del cursor */
-    opacity: 1; /* Inicialmente visible */
-    animation: blink-caret 0.75s step-end infinite; /* Aplica la animación de parpadeo */
-    transition: opacity 0.4s ease-in-out; /* Transición suave para la opacidad */
-  }
-  
-  /* Define la animación del cursor */
-  @keyframes blink-caret {
-    0%, 100% {
-      opacity: 0; /* Invisible al principio y al final */
-    }
-    50% {
-      opacity: 1; /* Visible a mitad de animación */
-    }
-  }
-  
+  display: inline-block;
+  overflow: hidden;
+  animation: blink-caret 0.75s step-end infinite;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 1em;
+  margin-top: 0; /* Elimina cualquier margen superior */
+  padding-top: 0; /* Elimina cualquier padding superior */
+  line-height: 1; /* Ajusta la altura de la línea */
+}
+
+
+.cursor {
+  display: inline;
+  margin-left: 1px; /* Añade un pequeño margen a la izquierda del cursor */
+  -webkit-animation: Typewriter-cursor 1s infinite; /* Aplicar animación en WebKit */
+  animation: Typewriter-cursor 1s infinite; /* Aplicar la animación en otros navegadores */
+}
+
+/* Animación del cursor parpadeante */
+@-webkit-keyframes Typewriter-cursor {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes Typewriter-cursor {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
