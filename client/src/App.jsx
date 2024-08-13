@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar"
 import Inicio from './components/Inicio/Inicio'
 import EfectoOla from "./components/EfectoOla/EfectoOla"
 import AboutMe from './components/AboutMe/AboutMe'
+import MyBio from './components/MyBio/MyBio'
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
         <Inicio />
         <EfectoOla />
         <AboutMe />
+        <MyBio />
+
       </section>
 
     </>

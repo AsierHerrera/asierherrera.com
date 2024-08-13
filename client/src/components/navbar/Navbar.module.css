@@ -5,7 +5,9 @@
   height: 105px;
   border-bottom: 1px solid #222222;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Ajusta la sombra para que sea más oscura */
-  position: relative; /* Asegura que los elementos posicionados dentro se alineen en relación con esta barra */
+  position: sticky; /* Mantiene la navbar visible al hacer scroll */
+  top: 0; /* Hace que la navbar se pegue a la parte superior al hacer scroll */
+  z-index: 1000; /* Asegura que la navbar esté siempre por encima del contenido de la página */
 }
 
 .container {

@@ -3,11 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: calc(100vh - 50px);
+    height: calc(80vh - 50px);
     padding: 0 50px 0 375px;
     background-color: #222222;
     color: white;
     font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
 }
 
 .textContainer {
@@ -68,9 +69,10 @@ h1 {
     color: #6e6e6ebb;
     margin-bottom: 30px;
     margin-top: 0;
-    overflow: hidden; /* Esto evita que el texto que sobresale se muestre */
+    overflow: visible; /* Esto evita que el texto que sobresale se muestre */
     font-weight: normal !important; /* Asegúrate de que el texto no esté en negrita */
     user-select: none;
+
 }
 
 .introP {

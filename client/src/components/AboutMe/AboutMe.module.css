@@ -1,9 +1,89 @@
-.container {
-    width: 100%; /* Ocupa todo el ancho del viewport */
-    height: 100vh; /* Opcional: Ocupa toda la altura del viewport, ajusta según tus necesidades */
-    background-color: white; /* Fondo blanco */
-    box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho y alto */
-    padding: 0; /* Asegura que no haya padding adicional */
-    margin: 0; /* Asegura que no haya margin adicional */
-  }
-  
+.fullWidthContainer {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.contentContainer {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  color: #68d372;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.rightColumn {
+  max-width: 700px;
+  flex: 2;
+}
+
+.leftColumn {
+  max-width: 700px;
+  font-size: 3em;
+  flex: 1;
+  position: relative; /* Asegura que el posicionamiento absoluto de .Linea::before esté relativo a esta columna */
+}
+
+.Linea::before {
+  content: "";
+  width: 130px;
+  height: 3px;
+  display: block;
+  background-color: #68d372;
+  position: absolute;
+  top: -50px; /* Ajusta para colocar la línea en la parte superior de la columna */
+  transform: translateY(10px); /* Ajusta para mover la línea ligeramente hacia abajo si es necesario */
+  left: -150px; /* Ajusta esta posición según sea necesario para alinear con el texto */
+}
+
+.stat {
+  max-height: 175px;
+  display: flex;
+  align-items: center;
+  position: relative; /* Asegura que los elementos dentro de .stat se alineen en relación con esta clase */
+}
+
+.statTitle {
+  color:#222222;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.highlight {
+  color: #68d372;
+}
+
+.sectionTitle {
+  color:#222222;
+  font-size: 4em;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.paragraph {
+  color: #6E6E6E;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 10 !important; /* Valor ajustado para un texto más fino */
+}
