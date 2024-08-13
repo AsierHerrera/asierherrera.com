@@ -1,0 +1,22 @@
+.support h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .support ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .support li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .support a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .support a:hover {
+    color: #4CAF50;
+  }

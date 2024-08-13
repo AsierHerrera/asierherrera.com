@@ -1,0 +1,22 @@
+.quickLinks h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quickLinks ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quickLinks li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .quickLinks a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .quickLinks a:hover {
+    color: #4CAF50;
+  }
