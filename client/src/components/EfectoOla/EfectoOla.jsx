@@ -7,7 +7,7 @@ const EfectoOla = () => {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 1440 400"
+        viewBox="0 -1 1440 400"
         xmlns="http://www.w3.org/2000/svg"
         className={styles.wave}
       >
