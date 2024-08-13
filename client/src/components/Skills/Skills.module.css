@@ -1,0 +1,81 @@
+.skillsSection {
+    background-color: #222222;
+    box-shadow: 0px 0px 10px 10px rgba(34, 34, 34, 1);
+    padding: 100px 0px; /* Aumentado */
+    text-align: center;
+  }
+  
+  .skillsContainer {
+    max-width: 1400px; /* Aumentado para pantallas más grandes */
+    margin: 0 auto;
+    padding: 20px 0px; /* Aumentado */
+    justify-content: space-around;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(100px); /* Inicialmente desplazado hacia abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Transiciones para opacidad y movimiento */
+  }
+  
+  .skillsContainer.visible {
+    opacity: 1; /* Opacidad completa cuando es visible */
+    transform: translateY(0); /* Regresa a su posición original */
+  }
+  
+  .skillsContainer.hidden {
+    opacity: 0; /* Transparente cuando deja de ser visible */
+    transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+  }
+  
+  .skillsContainer.hidden.up {
+    transform: translateY(-100px); /* Desplazado hacia arriba cuando deja de ser visible */
+  }
+  
+  .skillsContainer.hidden.down {
+    transform: translateY(100px); /* Desplazado hacia abajo cuando deja de ser visible */
+  }
+  
+  .sectionTitleContainer {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 60px; /* Ajustado para mayor separación */
+    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+  }
+  
+  .sectionTitle {
+    color: #68d372;
+    font-size: 28px; /* Aumentado */
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-left: 50px; /* Espacio para la línea */
+    margin: 0; /* Asegura que no haya márgenes adicionales */
+  }
+  
+  .sectionTitle::before {
+    content: "";
+    width: 2px; /* Ancho de la línea vertical */
+    height: 200px; /* Altura de la línea vertical */
+    position: absolute;
+    background-color: #68d372;
+    top: -110px; /* Centra verticalmente la línea en el contenedor */
+    left: 65%; /* Colocado al inicio del contenedor */
+    transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
+  }
+  
+  .skillLabel {
+    color: rgb(200, 200, 200);
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.75em;
+    margin-top: 40px; /* Aumentado */
+    margin-left: 3%; /* Aumentado */
+  }
+  
+  .skillCardsContainer {
+    display: flex;
+    gap: 50px; /* Aumentado */
+    margin-bottom: 100px; /* Aumentado */
+    margin-top: 40px; /* Aumentado */
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  

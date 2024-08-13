@@ -1,0 +1,48 @@
+.divCard {
+    position: relative;
+    width: 100px; /* Aumentado */
+    height: 100px; /* Aumentado */
+    margin-bottom: 20px; /* Aumentado */
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #222222;
+    box-shadow: 5px 5px 15px #181818, -5px -5px 15px #2c2c2c;
+    transition: background-color 0.2s ease, border-radius 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .divCard:hover {
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+  }
+  
+  .divCardItem {
+    position: absolute;
+    width: 70px; /* Aumentado */
+    height: 70px; /* Aumentado */
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .skillName {
+    position: relative;
+    display: table;
+    color: #6e6e6e;
+    font-size: 18px; /* Aumentado */
+    margin-top: 110px; /* Aumentado */
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.3s ease;
+  }
+  
+  .divCard:hover .skillName {
+    color: #68d372;
+  }
+  

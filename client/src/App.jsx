@@ -6,6 +6,7 @@ import Inicio from './components/Inicio/Inicio'
 import EfectoOla from "./components/EfectoOla/EfectoOla"
 import AboutMe from './components/AboutMe/AboutMe'
 import MyBio from './components/MyBio/MyBio'
+import Skills from './components/Skills/Skills'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <AboutMe />
         <MyBio />
         <EfectoOla topColor="#ffffff" bottomColor="#222222" />
+        <Skills />
+        <EfectoOla topColor="#222222" bottomColor="#ffffff" />
+
       </section>
     </>
   )
