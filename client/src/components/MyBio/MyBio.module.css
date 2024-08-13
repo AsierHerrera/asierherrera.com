@@ -1,13 +1,38 @@
-.bioContainer {
+.fondo {
     background-color: #fff;
-    padding: 80px 0;
   }
+
+.bioContainer {
+  background-color: #fff;
+  padding: 80px 0;
+  opacity: 0; /* Inicialmente transparente */
+  transform: translateY(100px); /* Inicialmente desplazado hacia abajo */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones para opacidad y movimiento */
+}
+
+.bioContainer.visible {
+  opacity: 1; /* Opacidad completa cuando es visible */
+  transform: translateY(0); /* Regresa a su posición original */
+}
+
+.bioContainer.hidden {
+  opacity: 0; /* Transparente cuando deja de ser visible */
+  transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+}
+
+.bioContainer.hidden.up {
+  transform: translateY(100px); /* Desplazado hacia arriba cuando deja de ser visible */
+}
+
+.bioContainer.hidden.down {
+  transform: translateY(100px); /* Desplazado hacia abajo cuando deja de ser visible */
+}
   
   .sectionTitle {
     text-align: center;
-    color: #4CAF50;
-    font-size: 24px;
-    margin-bottom: 40px;
+    color: #68d372;
+    margin-bottom: 60px;
+    font-size: 28px;
   }
   
   .bioContent {
@@ -28,7 +53,7 @@
     top: 20px;
     bottom: 20px;
     width: 4px;
-    background-color: #4CAF50;
+    background-color: #68d372;
   }
   
   .profileImage {
@@ -42,18 +67,22 @@
   }
   
   .mainTitle {
-    font-size: 48px;
-    line-height: 1.2;
+    color: #68d372;
+    font-size: 4em;
+    margin-top: 0;
     margin-bottom: 30px;
+    line-height: 1.2;
   }
   
   .highlight {
-    color: #4CAF50;
+    color: #222222;
   }
   
   .paragraph {
-    font-size: 16px;
-    line-height: 1.6;
+    color: #6E6E6E;
     margin-bottom: 20px;
-    color: #333;
+    line-height: 1.8;
+    font-size: 17px;
+    font-weight: 10 !important; /* Valor ajustado para un texto más fino */
   }
+  

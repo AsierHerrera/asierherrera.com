@@ -8,20 +8,18 @@ import AboutMe from './components/AboutMe/AboutMe'
 import MyBio from './components/MyBio/MyBio'
 
 function App() {
-
   return (
     <>
       <section>
         <Navbar />
         <Inicio />
-        <EfectoOla />
+        <EfectoOla topColor="#222222" bottomColor="#ffffff" />
         <AboutMe />
         <MyBio />
-
+        <EfectoOla topColor="#ffffff" bottomColor="#222222" />
       </section>
-
     </>
   )
 }
 
-export default App
+export default App;

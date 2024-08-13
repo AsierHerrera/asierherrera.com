@@ -1,9 +1,45 @@
+.fondo {
+  background-color: #fff;
+}
+
 .fullWidthContainer {
   font-family: "Poppins", sans-serif;
   width: 100%;
   background-color: #fff;
   padding: 80px 0;
   border: none;
+  opacity: 0; /* Inicialmente transparente */
+  transform: translateY(100px); /* Inicialmente desplazado hacia abajo */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones para opacidad y movimiento */
+}
+
+.fullWidthContainer.visible {
+  opacity: 1; /* Opacidad completa cuando es visible */
+  transform: translateY(0); /* Regresa a su posición original */
+}
+
+.fullWidthContainer.hidden {
+  opacity: 0; /* Transparente cuando deja de ser visible */
+  transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+}
+
+.fullWidthContainer.hidden.up {
+  transform: translateY(-100px); /* Desplazado hacia arriba cuando deja de ser visible */
+}
+
+.fullWidthContainer.hidden.down {
+  transform: translateY(100px); /* Desplazado hacia abajo cuando deja de ser visible */
+}
+
+.sectionTitle::before {
+  content: "";
+  width: 3px; /* Ancho de la línea vertical */
+  height: 100%; /* Altura de la línea vertical, para que se ajuste al tamaño del texto */
+  display: block;
+  background-color: #68d372;
+  position: absolute;
+  top: 0; /* Ajusta según el posicionamiento deseado */
+  left: -150px; /* Ajusta esta posición según sea necesario */
 }
 
 .contentContainer {
@@ -16,7 +52,7 @@
   text-align: center;
   color: #68d372;
   margin-bottom: 60px;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .content {
@@ -57,12 +93,11 @@
 }
 
 .statTitle {
-  color:#222222;
+  color: #222222;
   font-size: 1.2em;
   font-weight: bold;
   line-height: 1.2;
 }
-
 
 .icon {
   width: 100px;
@@ -75,16 +110,29 @@
 }
 
 .sectionTitle {
-  color:#222222;
+  color: #222222;
   font-size: 4em;
+  margin-top: 0;
   margin-bottom: 30px;
   line-height: 1.2;
+  position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
+}
+
+.sectionTitle::before {
+  content: "";
+  width: 3px; /* Ancho de la línea vertical */
+  height: 100%; /* Altura de la línea vertical, para que se ajuste al tamaño del texto */
+  display: block;
+  background-color: #68d372;
+  position: absolute;
+  top: 0; /* Ajusta según el posicionamiento deseado */
+  left: -150px;
 }
 
 .paragraph {
   color: #6E6E6E;
   margin-bottom: 20px;
   line-height: 1.8;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 10 !important; /* Valor ajustado para un texto más fino */
 }
