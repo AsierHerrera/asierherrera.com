@@ -1,0 +1,87 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-size: 1.2em;
+  height: 100%; /* Asegúrate de que la tarjeta ocupe toda la altura disponible */
+}
+
+.image {
+  width: 100%;
+  height: 250px; /* Aumenta la altura de la imagen */
+  object-fit: cover;
+}
+
+.content {
+  padding: 1.5rem;
+  height: calc(100% - 320px); /* Resta la altura de la imagen para que el contenido ocupe el resto */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.techStack {
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Empuja los botones hacia la parte inferior del contenido */
+}
+
+.button {
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+ 
+  .techStack {
+    margin-bottom: 1rem;
+  }
+  
+  .techLabel {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .techItem {
+    background-color: #f0f0f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+  }
+  
+  
+  .button:first-child {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button:last-child {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .button:hover {
+    opacity: 0.9;
+  }

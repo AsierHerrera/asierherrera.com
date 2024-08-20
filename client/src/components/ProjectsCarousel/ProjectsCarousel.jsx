@@ -1,5 +1,4 @@
-// ProjectCarousel.jsx
-import React from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -8,21 +7,17 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
-import slide_image_1 from '../../assets/images/img_1.jpg';
-import slide_image_2 from '../../assets/images/img_2.jpg';
-import slide_image_3 from '../../assets/images/img_3.jpg';
-import slide_image_4 from '../../assets/images/img_4.jpg';
-import slide_image_5 from '../../assets/images/img_5.jpg';
-import slide_image_6 from '../../assets/images/img_6.jpg';
-import slide_image_7 from '../../assets/images/img_7.jpg';
-
 import styles from './ProjectsCarousel.module.css';
+import ProjectCard from './ProjectCard/ProjectCard';
 
-function ProjectCarousel() {
+function ProjectCarousel({ projects }) {
+  const swiperRef = useRef(null);
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Projects</h1>
-      <Swiper
+          <h2 className={styles.sectionTitle}>Projects</h2>
+         <Swiper
+        ref={swiperRef}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -34,7 +29,12 @@ function ProjectCarousel() {
           depth: 100,
           modifier: 2.5,
         }}
-        pagination={{ el: `.${styles.swiperPagination}`, clickable: true }}
+        pagination={{ 
+          el: `.${styles.swiperPagination}`, 
+          clickable: true,
+          bulletClass: styles.swiperPaginationBullet,
+          bulletActiveClass: styles.swiperPaginationBulletActive,
+        }}
         navigation={{
           nextEl: `.${styles.swiperButtonNext}`,
           prevEl: `.${styles.swiperButtonPrev}`,
@@ -43,35 +43,20 @@ function ProjectCarousel() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className={styles.swiperContainer}
       >
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_3} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_4} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_5} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_6} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src={slide_image_7} alt="slide_image" />
-        </SwiperSlide>
+        {projects.map((project, index) => (
+          <SwiperSlide key={index} className={styles.swiperSlide}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              techStack={project.techStack}
+              sourceCodeUrl={project.sourceCodeUrl}
+              demoUrl={project.demoUrl}
+            />
+          </SwiperSlide>
+        ))}
 
         <div className={styles.sliderController}>
-          <div className={`${styles.swiperButtonPrev} ${styles.sliderArrow}`}>
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className={`${styles.swiperButtonNext} ${styles.sliderArrow}`}>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
           <div className={styles.swiperPagination}></div>
         </div>
       </Swiper>

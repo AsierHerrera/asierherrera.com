@@ -3,19 +3,19 @@
     padding: 20px;
     color: #ffffff;
   }
-  
+
   .title {
     text-align: center;
     color: #4CAF50;
     margin-bottom: 30px;
   }
-  
+
   .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .timeline::after {
     content: '';
     position: absolute;
