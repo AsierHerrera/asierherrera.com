@@ -14,15 +14,14 @@
 }
 
 .title::before {
-  content: '';
+  content: "";
+  width: 2px; /* Ancho de la línea vertical */
+  height: 200px; /* Altura de la línea vertical */
   position: absolute;
-  width: 3px;
   background-color: #68d372;
-  height: 200px; /* Ajusta la altura de la línea encima del título */
-  top: -200px; /* Posiciona la línea justo encima del título */
-  left: 50%; /* Centra la línea horizontalmente */
-  transform: translateX(-50%);
-  z-index: 0; /* Envía la línea detrás del texto del título */
+  top: -110px; /* Centra verticalmente la línea en el contenedor */
+  left: 65%; /* Colocado al inicio del contenedor */
+  transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
 }
 
 

@@ -10,7 +10,7 @@ import Skills from './components/Skills/Skills'
 import ProjectCarousel from './components/ProjectsCarousel/ProjectsCarousel'
 import Milestones from './components/Milestones/Milestones'
 import Form from './components/Form/Form'
-import Footer from './components/Footer.jsx/Footer'
+import Footer from './components/Footer/Footer'
 function App() {
 
   const milestoneData = [

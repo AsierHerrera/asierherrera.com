@@ -1,59 +1,112 @@
+.fondo{
+  background-color: #fff;
+
+}
+
 .formContainer {
-    display: flex;
+  padding: 2rem;
+  background-color: #fff;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.contactTitle {
+  color: #68d372;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  margin-top: -15px;
+  font-weight: bold;
+  text-align: center;
+  color: #222222;
+}
+
+.greenText {
+  color: #68d372;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 100px;
+}
+
+.input, .textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.button {
+  align-self: flex-start;
+  background-color: #68d372;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.sendIcon {
+  margin-right: 0.5rem;
+}
+
+.illustration {
+  width: 35%;
+}
+
+.illustration img {
+  width: 100%;
+  height: auto;
+}
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.success {
+  color: green;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .contentWrapper {
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background-color: #fff;
   }
-  
-  .contactTitle {
-    color: #4CAF50;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .mainTitle {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
+
+  .form, .illustration {
     width: 100%;
-    max-width: 600px;
   }
-  
-  .input, .textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  .textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  
-  .button {
-    align-self: flex-end;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sendIcon {
-    margin-right: 0.5rem;
-  }
-  
+
   .illustration {
     margin-top: 2rem;
-    max-width: 300px;
   }
+}
