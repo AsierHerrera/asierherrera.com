@@ -14,6 +14,7 @@ const Milestones = ({ milestones }) => {
             title={milestone.title}
             subtitle={milestone.subtitle}
             description={milestone.description}
+            type={milestone.type} /* Pasar el tipo aquí */
           />
         ))}
       </div>

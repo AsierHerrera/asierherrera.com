@@ -12,12 +12,23 @@ import Milestones from './components/Milestones/Milestones'
 import Form from './components/Form/Form'
 import Footer from './components/Footer.jsx/Footer'
 function App() {
+
   const milestoneData = [
     {
       date: '15th February, 2024',
       title: 'Full Stack Developer',
       subtitle: 'HashX',
-      description: 'HashX is dedicated to offering robust cybersecurity capabilities...'
+      type: 'work',  // Indica que este milestone es de trabajo
+
+      description: 'HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...'
+    },
+    {
+      date: '15th February, 2024',
+      title: 'Full Stack Developer',
+      subtitle: 'HashX',
+      type: 'study',  // Indica que este milestone es de trabajo
+
+      description: 'HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...'
     },
     {
       date: '15th February, 2024',
@@ -38,6 +49,7 @@ function App() {
       description: 'HashX is dedicated to offering robust cybersecurity capabilities...'
     },
   ];
+
   const projects = [
     {
       title: "GitTrack",
@@ -105,8 +117,6 @@ function App() {
     }
   ];
   
-
-
   return (
     <>
       <section>

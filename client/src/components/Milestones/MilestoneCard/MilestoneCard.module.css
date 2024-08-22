@@ -1,12 +1,13 @@
 .milestoneCard {
   padding: 10px 40px;
   position: relative;
-  width: 50%;
+  width: 70%;
+  height: 300px;
   box-sizing: border-box;
 }
 
 .milestoneCard:nth-child(odd) {
-  left: 0;
+  left: -20%;
 }
 
 .milestoneCard:nth-child(even) {
@@ -16,14 +17,19 @@
 .milestoneCard::after {
   content: '';
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   right: -8px;
-  background-color: #4CAF50;
-  border: 2px solid #4CAF50;
+  background-color: #222222;
+  border: 2px solid #68d372;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
+  transition: 0.2s ease-in-out;
+}
+
+.milestoneCard:hover::after {
+  background-color: #68d372;
 }
 
 .milestoneCard:nth-child(even)::after {
@@ -31,31 +37,50 @@
 }
 
 .date {
-  color: #4CAF50;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.content {
-  padding: 15px;
-  background-color: #2a2a2a;
-  border: 1px solid #4CAF50;
-  border-radius: 5px;
-}
-
-.title {
-  color: #ffffff;
+  color: #6E6E6E;
   font-size: 18px;
   margin-bottom: 5px;
 }
 
+.date::before {
+  position: relative;
+  margin-right: 10px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+}
+
+.date.study::before {
+  content: "\f19d"; /* Código del icono para estudio */
+  color: #222222;
+  -webkit-text-stroke: 1px #68d372;
+}
+
+.date.work::before {
+  content: "\f0b1"; /* Código del icono para trabajo */
+  color: #222222;
+  -webkit-text-stroke: 1px #68d372;
+}
+
+.content {
+  padding: 15px;
+  background-color: #222222;
+  border: 1px solid #68d372;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.title {
+  color: #aaa7a7;
+  font-size: 20px;
+}
+
 .subtitle {
-  color: #4CAF50;
-  font-size: 16px;
-  margin-bottom: 10px;
+  color: #68d372;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .description {
-  color: #cccccc;
-  font-size: 14px;
+  color: #6E6E6E;
+  font-size: 18px;
 }
