@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import styles from "./Form.module.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import emailjs from "@emailjs/browser";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";  // Importa el icono del avión de papel
 
 const Form = () => {
   const form = useRef();
@@ -72,14 +74,14 @@ const Form = () => {
           Call or write <span className={styles.greenText}>anytime</span>
         </h1>
         <div className={styles.contentWrapper}>
-          <form ref={form} onSubmit={sendEmail} className={styles.form}>
+          <form ref={form} onSubmit={sendEmail} className={styles.form} noValidate>
             <input
               type="text"
               placeholder="Full Name"
               name="user_name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className={styles.input}
+              className={`${styles.input} ${errors.name && styles.inputError}`}
             />
             {errors.name && <p className={styles.error}>{errors.name}</p>}
             <input
@@ -88,7 +90,7 @@ const Form = () => {
               name="user_email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className={styles.input}
+              className={`${styles.input} ${errors.email && styles.inputError}`}
             />
             {errors.email && <p className={styles.error}>{errors.email}</p>}
             <textarea
@@ -96,18 +98,20 @@ const Form = () => {
               name="message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className={styles.textarea}
+              className={`${styles.textarea} ${errors.message && styles.inputError}`}
             />
             {errors.message && <p className={styles.error}>{errors.message}</p>}
             <button type="submit" className={styles.button}>
-              <span className={styles.sendIcon}>➤</span> Send Message
+            <FontAwesomeIcon icon={faPaperPlane} className={styles.sendIcon} />
+              Send Message 
+
             </button>
           </form>
           <div className={styles.illustration}>
             <Player
               autoplay
               loop
-              speed={0.2}
+              speed={0.7}
               src="/img/contact-image-data.json"
               style={{ height: "500px", width: "500px" }}
             />

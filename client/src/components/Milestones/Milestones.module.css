@@ -20,7 +20,7 @@
   position: absolute;
   background-color: #68d372;
   top: -110px; /* Centra verticalmente la línea en el contenedor */
-  left: 65%; /* Colocado al inicio del contenedor */
+  left: 50%; /* Colocado al inicio del contenedor */
   transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
 }
 
