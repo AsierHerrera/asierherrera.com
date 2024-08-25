@@ -38,30 +38,30 @@ const Skills = () => {
         <h3 className={styles.skillLabel}>Programming Skills</h3>
         <div className={styles.skillCardsContainer}>
           <SkillIcon name="MongoDB" icon="/img/icon/mongodb.png" level="Advanced Beginner" />
+          <SkillIcon name="MySQL" icon="/img/icon/MySQL.png" level="Proficient" />
           <SkillIcon name="Express.js" icon="/img/icon/express-js.png" level="Proficient" />
           <SkillIcon name="React.js" icon="/img/icon/react-js.png" level="Proficient" />
           <SkillIcon name="Node.js" icon="/img/icon/node-js.png" level="Proficient" />
           <SkillIcon name="JavaScript" icon="/img/icon/js.png" level="Expert" />
-          <SkillIcon name="Python" icon="/img/icon/python.png" level="Proficient" />
-          <SkillIcon name="Next.js" icon="/img/icon/next-js.png" level="Proficient" />
-          <SkillIcon name="TypeScript" icon="/img/icon/typescript.png" level="Advanced Beginner" />
+          <SkillIcon name="Postman" icon="/img/icon/Postman.png" level="Proficient" />
           <SkillIcon name="HTML" icon="/img/icon/html-5.png" level="Expert" />
           <SkillIcon name="CSS" icon="/img/icon/css-3.png" level="Expert" />
         </div>
 
         <h3 className={styles.skillLabel}>Tools & Other Skills</h3>
         <div className={styles.skillCardsContainer}>
-          <SkillIcon name="UI/UX" icon="/img/icon/ui-ux.png" level="Proficient" />
           <SkillIcon name="Git" icon="/img/icon/git.png" level="Expert" />
           <SkillIcon name="Docker" icon="/img/icon/docker.png" level="Advanced Beginner" />
+          <SkillIcon name="Swagger" icon="/img/icon/Swagger.png" level="Proficient" />
           <SkillIcon name="DevOps" icon="/img/icon/devops.png" level="Proficient" />
+
         </div>
 
         <h3 className={styles.skillLabel}>Communication Skills</h3>
         <div className={styles.skillCardsContainer}>
-          <SkillIcon name="Sinhala" icon="/img/icon/lang-si.png" level="Native" />
-          <SkillIcon name="English" icon="/img/icon/lang-en.png" level="Proficient" />
-          <SkillIcon name="Tamil" icon="/img/icon/lang-ta.png" level="Advanced Beginner" />
+          <SkillIcon name="Spanish" icon="/img/icon/spain.png" level="Native" />
+          <SkillIcon name="English" icon="/img/icon/UK.png" level="Proficient" />
+          <SkillIcon name="Euskera" icon="/img/icon/EUS.png" level="Advanced Beginner" />
         </div>
       </div>
     </section>

@@ -43,6 +43,7 @@
   }
   
   .imageContainer {
+    margin-top: 15px;
     flex: 1;
     position: relative;
   }
