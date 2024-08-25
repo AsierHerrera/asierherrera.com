@@ -25,7 +25,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <section className={styles.fondo}>
+    <section id="about" className={styles.fondo}>
       <article
         ref={containerRef}
         className={`${styles.fullWidthContainer} ${isVisible ? styles.visible : styles.hidden}`}

@@ -2,17 +2,20 @@
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center; /* Cambiado de flex-start a center */
     height: calc(80vh - 50px);
     padding: 0 50px 0 375px;
     background-color: #222222;
     color: white;
     font-family: "Poppins", sans-serif;
     margin-bottom: 0;
+    max-width:1600px;
+    margin: 0 auto;
 }
 
 .textContainer {
-    max-width: 35%;
+    width: 50%;
+    padding-right: 20px; /* Añade un poco de espacio entre el texto y la imagen */
 }
 
 h1 {
@@ -166,9 +169,21 @@ h1 {
 }
 
 .imageContainer {
-    width: 45%;
-    height: 100%;
-    background-image: url('./path-to-your-image.png');
-    background-size: cover;
-    background-position: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+.videoAnimation {
+    width: 100%;  /* Ajusta el tamaño según tus necesidades */
+    height: auto;  /* Mantiene la proporción del video */
+    border-radius: 50%; /* Hace que el video sea redondo */
+    object-fit: cover; /* Asegura que el video cubra el contenedor completamente */
+}
+.lottieAnimation {
+    width: 100%;
+    max-width: 500px; /* Ajusta este valor según sea necesario */
+    height: auto;
 }

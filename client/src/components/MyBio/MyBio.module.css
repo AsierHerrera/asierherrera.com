@@ -46,15 +46,7 @@
     flex: 1;
     position: relative;
   }
-  
-  .greenLine {
-    position: absolute;
-    left: 0;
-    top: 20px;
-    bottom: 20px;
-    width: 4px;
-    background-color: #68d372;
-  }
+
   
   .profileImage {
     width: 100%;

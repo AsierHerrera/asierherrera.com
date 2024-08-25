@@ -14,7 +14,7 @@ function ProjectCarousel({ projects }) {
   const swiperRef = useRef(null);
 
   return (
-    <div className={styles.container}>
+    <div id="projects" className={styles.container}>
           <h2 className={styles.sectionTitle}>Projects</h2>
          <Swiper
         ref={swiperRef}

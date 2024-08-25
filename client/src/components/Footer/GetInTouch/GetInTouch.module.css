@@ -1,19 +1,32 @@
 .getInTouch h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .socialIcons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .icon {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  .icon:hover {
-    opacity: 0.8;
-  }
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Hace que el fondo sea circular */
+  padding: 10px; /* Ajusta el espacio interior alrededor del icono */
+  transition: transform 0.3s ease;
+}
+
+.svgIcon {
+  width: 40px;
+  height: 40px;
+  color: #68d372; /* Cambia el color del icono */
+}
+
+.icon:hover .svgIcon {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Aplica la transición tanto a la escala como a la sombra */
+
+}

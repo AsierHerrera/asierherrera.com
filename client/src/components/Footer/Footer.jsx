@@ -7,11 +7,13 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <QuickLinks />
-      <Support />
-      <GetInTouch />
+      <div className={styles.footerContent}>
+        <QuickLinks />
+        <Support />
+        <GetInTouch />
+      </div>
       <div className={styles.copyright}>
-        Copyright © 2020-2024 | All rights reserved. Made with ❤ by Lakshan Rukantha
+        Copyright © 2020-2024 | All rights reserved. Made with ❤ by Asier Herrera
       </div>
     </footer>
   );

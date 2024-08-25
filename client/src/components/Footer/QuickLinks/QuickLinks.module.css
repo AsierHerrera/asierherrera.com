@@ -1,22 +1,27 @@
 .quickLinks h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .quickLinks ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .quickLinks li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .quickLinks a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .quickLinks a:hover {
-    color: #4CAF50;
-  }
+  font-family: "Poppins", sans-serif;
+  font-weight: 300; /* Peso de la fuente más ligero */
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.quickLinks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quickLinks li {
+  font-family: sans-serif;
+  margin-bottom: 0.7rem;
+}
+
+.quickLinks a {
+  color: #666;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.quickLinks a:hover {
+  color: #4CAF50;
+}

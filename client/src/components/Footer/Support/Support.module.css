@@ -1,22 +1,25 @@
 .support h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .support ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .support li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .support a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .support a:hover {
-    color: #4CAF50;
-  }
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.support ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.support li {
+  font-family: sans-serif;
+  margin-bottom: 0.7rem;
+  color: #666;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+
+.support li:hover {
+  color: #4CAF50;
+  cursor: pointer;
+}

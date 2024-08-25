@@ -1,12 +1,14 @@
 .fondo {
   background-color: #fff;
+  margin-bottom: 0;
 }
 
 .formContainer {
-  padding: 2rem;
+  padding-top: 2rem;
   background-color: #fff;
   max-width: 1600px;
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 0;
   position: relative; /* Necesario para que la línea se posicione correctamente */
 }
 

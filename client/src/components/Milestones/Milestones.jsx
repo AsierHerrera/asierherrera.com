@@ -4,7 +4,7 @@ import styles from './Milestones.module.css';
 
 const Milestones = ({ milestones }) => {
   return (
-    <div className={styles.milestonesContainer}>
+    <div id="milestones" className={styles.milestonesContainer}>
       <h2 className={styles.title}>Special Milestones</h2>
       <div className={styles.timeline}>
         {milestones.map((milestone, index) => (

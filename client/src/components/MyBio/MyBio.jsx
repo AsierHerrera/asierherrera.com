@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './MyBio.module.css';
 
+
 const MyBio = () => {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +44,7 @@ const MyBio = () => {
         <article className={styles.bioContent}>
           <aside className={styles.imageContainer}>
             <div className={styles.greenLine}></div>
-            <img src="/path-to-your-image.jpg" alt="Profile" className={styles.profileImage} />
+            <img src="../../../public/img/portfolio.jpg" alt="Profile" className={styles.profileImage} />
           </aside>
           <div className={styles.textContent}>
             <h1 className={styles.mainTitle}>

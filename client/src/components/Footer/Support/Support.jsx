@@ -6,9 +6,9 @@ const Support = () => {
     <div className={styles.support}>
       <h3>Support</h3>
       <ul>
-        <li><a href="#terms">Terms & Conditions</a></li>
-        <li><a href="#privacy">Privacy</a></li>
-        <li><a href="#cookies">Cookie preferences</a></li>
+        <li>Terms & Conditions</li>
+        <li>Privacy</li>
+        <li>Cookie preferences</li>
       </ul>
     </div>
   );

@@ -1,15 +1,19 @@
 .footer {
-    background-color: grey;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .copyright {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
+  background-color: #fff;
+
+  padding-bottom: 4rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}

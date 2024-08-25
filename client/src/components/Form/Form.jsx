@@ -67,7 +67,7 @@ const Form = () => {
   };
 
   return (
-    <div className={styles.fondo}>
+    <div id="contact" className={styles.fondo}>
       <div className={styles.formContainer}>
         <p className={styles.contactTitle}>Contact</p>
         <h1 className={styles.mainTitle}>
