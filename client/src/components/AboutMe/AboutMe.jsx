@@ -10,7 +10,7 @@ const AboutMe = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Ajusta el umbral según sea necesario
+      { threshold: 0.01 }
     );
 
     if (containerRef.current) {

@@ -17,6 +17,7 @@
   .divCard:hover {
     border-radius: 50%;
     background-color: rgb(200, 200, 200);
+    cursor: pointer;
   }
   
   .divCardItem {

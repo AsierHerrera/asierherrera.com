@@ -1,29 +1,54 @@
+.fondo {
+  background-color: #222222;
+
+}
+
 .milestonesContainer {
   background-color: #222222;
-  padding: 40px;
+  padding: 40px 20px;
   color: #ffffff;
   position: relative;
+  opacity: 0; /* Inicialmente transparente */
+  transform: translateY(100px); /* Inicialmente desplazado hacia abajo */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones para opacidad y movimiento */
+}
+
+.visible {
+  opacity: 1; /* Opacidad completa cuando es visible */
+  transform: translateY(0); /* Regresa a su posición original */
+}
+
+.hidden {
+  opacity: 0; /* Transparente cuando deja de ser visible */
+  transform: translateY(100px); /* Desplazado hacia abajo cuando deja de ser visible */
 }
 
 .title {
   text-align: center;
   color: #68d372;
   margin-bottom: 60px;
-  font-size: 36px; /* Aumenta el tamaño de fuente del título */
+  font-size: 36px;
   position: relative;
 }
 
 .title::before {
-  content: "";
-  width: 2px; /* Ancho de la línea vertical */
-  height: 200px; /* Altura de la línea vertical */
-  position: absolute;
-  background-color: #68d372;
-  top: -110px; /* Centra verticalmente la línea en el contenedor */
-  left: 50%; /* Colocado al inicio del contenedor */
-  transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
+  display: none;
 }
 
+/* Estilos para pantallas a partir de 1024px */
+@media (min-width: 1024px) {
+  .title::before {
+    content: "";
+    width: 3px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    background-color: #68d372;
+    top: -110px;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+}
 
 .timeline {
   position: relative;
@@ -39,7 +64,26 @@
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -1.5px; /* Ajusta el centrado de la línea vertical */
-  z-index: 0; /* Asegura que esté detrás de otros elementos */
+  margin-left: -1.5px;
+  z-index: 0;
 }
 
+@media (max-width: 768px) {
+  .title::before {
+    display: none;
+  }
+
+  .timeline::after {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title::before {
+    display: none;
+  }
+
+  .timeline::after {
+    display: none;
+  }
+}

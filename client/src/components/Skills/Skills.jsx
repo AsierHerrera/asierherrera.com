@@ -11,7 +11,7 @@ const Skills = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Ajusta el umbral según sea necesario
+      { threshold: 0.01 } // Ajusta el umbral según sea necesario
     );
 
     if (containerRef.current) {
@@ -46,6 +46,8 @@ const Skills = () => {
           <SkillIcon name="Postman" icon="/img/icon/Postman.png" level="Proficient" />
           <SkillIcon name="HTML" icon="/img/icon/html-5.png" level="Expert" />
           <SkillIcon name="CSS" icon="/img/icon/css-3.png" level="Expert" />
+          <SkillIcon name="Tailwind CSS" icon="/img/icon/tailwind.png" level="Expert" />
+          <SkillIcon name="PUG" icon="/img/icon/Pug2.svg" level="Expert" />
         </div>
 
         <h3 className={styles.skillLabel}>Tools & Other Skills</h3>
@@ -53,6 +55,8 @@ const Skills = () => {
           <SkillIcon name="Git" icon="/img/icon/git.png" level="Expert" />
           <SkillIcon name="Docker" icon="/img/icon/docker.png" level="Advanced Beginner" />
           <SkillIcon name="Swagger" icon="/img/icon/Swagger.png" level="Proficient" />
+          <SkillIcon name="VSC" icon="/img/icon/VSC.png" level="Proficient" />
+          <SkillIcon name="Linux" icon="/img/icon/linux.png" level="Proficient" />
           <SkillIcon name="DevOps" icon="/img/icon/devops.png" level="Proficient" />
 
         </div>

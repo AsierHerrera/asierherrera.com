@@ -1,37 +1,41 @@
+/* Navbar.module.css */
 .navbar {
   width: 100%;
   background-color: #222222;
   color: white;
   height: 105px;
   border-bottom: 1px solid #222222;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Ajusta la sombra para que sea más oscura */
-  position: sticky; /* Mantiene la navbar visible al hacer scroll */
-  top: 0; /* Hace que la navbar se pegue a la parte superior al hacer scroll */
-  z-index: 1000; /* Asegura que la navbar esté siempre por encima del contenido de la página */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinea los elementos verticalmente */
-  max-width: 1625px; /* Limita el ancho del contenido */
-  margin: 0 auto; /* Centra el contenido dentro de la navbar */
-  height: 100%; /* Asegura que el contenedor tenga la misma altura que la navbar */
-  position: relative; /* Permite que los elementos dentro se alineen en relación con este contenedor */
+  align-items: center;
+  max-width: 1625px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  padding: 0 20px;
 }
 
 .logo {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background-color: #68d372;
-  padding: 40px 12.5px 10px 12.5px; /* Reduce el padding para alinear el texto mejor */
+  padding: 40px 12.5px 10px 12.5px;
   font-size: 2em;
   color: white;
-  font-weight: 1000; /* Ajusta el grosor del texto */
-  line-height: 1; /* Asegura que el texto esté alineado verticalmente */
+  font-weight: 1000;
+  line-height: 1;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-top: 0; /* Elimina el margen superior que podría estar empujando el logo hacia abajo */
-  margin-bottom: auto; /* Permite que el logo se adhiera al borde superior del contenedor */
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: auto;
+  cursor: pointer;
 }
 
 .links {
@@ -56,16 +60,120 @@
   color: #ffffff;
   border: none;
   background-color: #68d372;
-  padding: 12.5px 17.5px; /* Aumenta el padding para hacer el botón más grande */
-  border-radius: 6px; /* Aumenta el radio del borde para un botón más grande y redondeado */
+  padding: 12.5px 17.5px;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 1.1rem; /* Aumenta el tamaño del texto */
-  font-weight: bold; /* Hace que el texto sea más negrita */
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .icon {
-  margin-right: 15px; /* Aumenta el margen derecho para mayor separación del texto */
-  font-size: 1.7rem; /* Aumenta el tamaño del icono */
+  margin-right: 15px;
+  font-size: 1.7rem;
+}
+
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menuIcon span {
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.menuIcon span:nth-child(2) {
+  background: #68d372;
+}
+
+/* Estilos para tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 80px;
+  }
+
+  .logo {
+    font-size: 1.5em;
+    padding: 30px 10px 8px 10px;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #222222;
+    padding: 20px 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .links.showMenu {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .links button {
+    margin: 10px 0;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+
+  .cvDownload {
+    display: none;
+
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1.2em;
+    padding: 20px 8px 6px 8px;
+  }
+
+  .cvDownload {
+    display: none;
+  }
+
+  .links.showMenu {
+    top: 60px;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+
+  .downloadText {
+    display: none;
+  }
 }

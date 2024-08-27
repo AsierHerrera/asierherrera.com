@@ -1,13 +1,14 @@
+/* MilestoneCard.module.css */
+
 .milestoneCard {
   padding: 10px 40px;
   position: relative;
-  width: 70%;
-  height: 300px;
+  width: 50%;
   box-sizing: border-box;
 }
 
 .milestoneCard:nth-child(odd) {
-  left: -20%;
+  left: 0;
 }
 
 .milestoneCard:nth-child(even) {
@@ -50,13 +51,13 @@
 }
 
 .date.study::before {
-  content: "\f19d"; /* Código del icono para estudio */
+  content: "\f19d";
   color: #222222;
   -webkit-text-stroke: 1px #68d372;
 }
 
 .date.work::before {
-  content: "\f0b1"; /* Código del icono para trabajo */
+  content: "\f0b1";
   color: #222222;
   -webkit-text-stroke: 1px #68d372;
 }
@@ -83,4 +84,77 @@
 .description {
   color: #6E6E6E;
   font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .milestoneCard {
+    width: calc(100% - 60px);
+    left: 60px !important;
+  }
+
+  .milestoneCard::after {
+    left: -39px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .milestoneCard {
+    width: calc(100% - 50px);
+    left: 50px !important;
+    padding: 10px 20px;
+  }
+
+  .milestoneCard::after {
+    left: -34px !important;
+  }
+
+  .content {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 19px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .milestoneCard {
+    width: 100%;
+    left: 0 !important;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .milestoneCard::after {
+    display: none;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+
+  .content {
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
 }

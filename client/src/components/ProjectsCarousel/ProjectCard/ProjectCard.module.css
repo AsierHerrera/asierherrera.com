@@ -5,21 +5,22 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   font-size: 1.2em;
-  height: 100%; /* Asegúrate de que la tarjeta ocupe toda la altura disponible */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
   width: 100%;
-  height: 250px; /* Aumenta la altura de la imagen */
+  height: 250px;
   object-fit: cover;
 }
 
 .content {
   padding: 1.5rem;
-  height: calc(100% - 320px); /* Resta la altura de la imagen para que el contenido ocupe el resto */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .title {
@@ -33,6 +34,7 @@
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .techStack {
@@ -42,7 +44,7 @@
 .buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: auto; /* Empuja los botones hacia la parte inferior del contenido */
+  margin-top: auto;
 }
 
 .button {
@@ -53,35 +55,95 @@
   transition: background-color 0.3s;
 }
 
- 
-  .techStack {
-    margin-bottom: 1rem;
+.techStack {
+  margin-bottom: 1rem;
+}
+
+.techLabel {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.techItem {
+  background-color: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.button:first-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button:last-child {
+  background-color: #2196F3;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .card {
+    font-size: 1em;
   }
-  
-  .techLabel {
-    font-weight: bold;
-    margin-right: 0.5rem;
+
+  .image {
+    height: 200px;
   }
-  
-  .techItem {
-    background-color: #f0f0f0;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
+
+  .content {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    font-size: 0.9em;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .content {
+    padding: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
     font-size: 0.8rem;
-    margin-right: 0.5rem;
   }
-  
-  
-  .button:first-child {
-    background-color: #4CAF50;
-    color: white;
+
+  .techItem {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
   }
-  
-  .button:last-child {
-    background-color: #2196F3;
-    color: white;
+
+  .button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
   }
-  
-  .button:hover {
-    opacity: 0.9;
-  }
+}

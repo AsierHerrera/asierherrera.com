@@ -13,7 +13,7 @@ const Footer = () => {
         <GetInTouch />
       </div>
       <div className={styles.copyright}>
-        Copyright © 2020-2024 | All rights reserved. Made with ❤ by Asier Herrera
+        Copyright © 2024 | All rights reserved. Made with ❤ by Asier Herrera
       </div>
     </footer>
   );

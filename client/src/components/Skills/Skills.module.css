@@ -49,17 +49,25 @@
     margin: 0; /* Asegura que no haya márgenes adicionales */
   }
   
+ 
   .sectionTitle::before {
-    content: "";
-    width: 2px; /* Ancho de la línea vertical */
-    height: 200px; /* Altura de la línea vertical */
-    position: absolute;
-    background-color: #68d372;
-    top: -110px; /* Centra verticalmente la línea en el contenedor */
-    left: 65%; /* Colocado al inicio del contenedor */
-    transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
+    display: none;
   }
   
+  /* Estilos para pantallas a partir de 1024px */
+  @media (min-width: 1024px) {
+    .sectionTitle::before {
+      content: "";
+      width: 3px; /* Ancho de la línea vertical */
+      height: 200px; /* Altura de la línea vertical */
+      display: block;
+      position: absolute;
+      background-color: #68d372;
+      top: -110px; /* Centra verticalmente la línea en el contenedor */
+      left: 65%; /* Colocado al inicio del contenedor */
+      transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
+    }
+  }
   .skillLabel {
     color: rgb(200, 200, 200);
     font-weight: 600;

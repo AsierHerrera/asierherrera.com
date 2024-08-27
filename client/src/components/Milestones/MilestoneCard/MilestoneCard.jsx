@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './MilestoneCard.module.css';
 
-
 const MilestoneCard = ({ date, title, subtitle, description, type }) => {
   return (
     <div className={styles.milestoneCard}>

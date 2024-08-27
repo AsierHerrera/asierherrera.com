@@ -1,8 +1,7 @@
 .support h3 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   color: #333;
-  font-size: 1.4rem;
 }
 
 .support ul {
@@ -18,8 +17,19 @@
   font-size: 1.2rem;
 }
 
-
 .support li:hover {
   color: #4CAF50;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .support ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .support li {
+    margin: 0 10px 10px;
+  }
 }

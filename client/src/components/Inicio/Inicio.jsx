@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './Inicio.module.css';
 import Typewriter from './Typewriter/Typewriter';
 import Lottie from 'lottie-react';
-import animationData from '../../../public/Animation.json'; // Ruta correcta al archivo JSON
+import animationData from '../../../public/Animation.json';
+import CV from '../../../public/CV/Curriculum Vitae Asier Herrera.pdf'
 
 function Inicio() {
     const texts = [
@@ -30,16 +31,26 @@ function Inicio() {
                     there's <span className={styles.introP}>confidence</span> in the ability to deliver <span className={styles.introP}>custom solutions</span> to various project requirements.
                 </p>
 
-
                 <div className={styles.buttons}>
-                    <button className={styles.cvDownload}>
+                    <button
+                        className={styles.cvDownload}
+                        onClick={() => {
+                            const link = document.createElement('a');
+                            link.href = CV;
+                            link.download = 'Curriculum Vitae Asier Herrera.pdf';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }}
+                    >
                         <i className={`fas fa-cloud-arrow-down ${styles.icon}`}></i>
                         Download CV
                     </button>
-                    <button className={styles.contactButton}>
+
+                    <button className={styles.contactButton} onClick={() => window.location.href = '#contact'}>
                         <i className={`fas fa-envelope ${styles.icon}`}></i>
                         Contact Me
-                    </button>                
+                    </button>
                 </div>
             </div>
 

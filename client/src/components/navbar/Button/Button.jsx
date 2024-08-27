@@ -1,6 +1,6 @@
 // Button.js
 import React from 'react';
-import styles from './Button.module.css'; // Asegúrate de crear este archivo de estilos
+import styles from './Button.module.css';
 
 const Button = ({ text, onClick }) => {
   return (

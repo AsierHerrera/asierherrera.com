@@ -1,23 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-
 import styles from './ProjectsCarousel.module.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 
 function ProjectCarousel({ projects }) {
-  const swiperRef = useRef(null);
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.01 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div id="projects" className={styles.container}>
-          <h2 className={styles.sectionTitle}>Projects</h2>
-         <Swiper
-        ref={swiperRef}
+    <section className={styles.fondo}>
+      <div
+      id="projects"
+      ref={containerRef}
+      className={`${styles.container} ${isVisible ? styles.visible : styles.hidden}`}
+    >
+      <h2 className={styles.sectionTitle}>Projects</h2>
+      <Swiper
+        ref={containerRef}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -55,12 +78,14 @@ function ProjectCarousel({ projects }) {
             />
           </SwiperSlide>
         ))}
-
         <div className={styles.sliderController}>
           <div className={styles.swiperPagination}></div>
         </div>
       </Swiper>
     </div>
+
+    </section>
+    
   );
 }
 

@@ -15,40 +15,63 @@ function App() {
 
   const milestoneData = [
     {
-      date: '15th February, 2024',
-      title: 'Full Stack Developer',
-      subtitle: 'HashX',
+      date: '12th July, 2024',
+      title: 'Bootcamp final project and graduation',
+      subtitle: 'TheBridge',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'Presentation of the collaborative project with other verticals of the organization (UX/UI, Data Science, and Cybersecurity) to Seniority.ai, which proposed the integration into their website. We are currently managing this project with them. After 4 intense months of Bootcamp, we completed the course and started the job placement in this new specialty.',
+    },
+    {
+      date: '27th June, 2024',
+      title: 'Crew Challenge',
+      subtitle: 'TheBridge',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'My first challenge for a real company as a programmer. I was responsible for developing an application for Seniority.ai. I created a UX/UI-oriented project management platform using MongoDB for the database, Express.js for the backend, React.js for the UI, and Node.js for the server environment. The platform allows for project creation, tracking, and collaboration, integrating subforums and commenting features to enhance user interaction.',
+    },
+    {
+      date: '17th May, 2024',
+      title: 'First Backend Project',
+      subtitle: 'TheBridge',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'BackendOfTheRings was my first backend project, where I learned to manage requests with CRUD, use middleware, and work with PUG for the views. Check out the projects section for more details!',
+    },
+    {
+      date: '28th April, 2024',
+      title: 'PREGUNTAPI',
+      subtitle: 'TheBridge',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'My own API project where I applied my initial knowledge of Vanilla JS to create a tool capable of generating trivia questions about programming languages based on the difficulty selected by the user. Later, I developed the backend to track the ranking, so come and test your knowledge!',
+    },
+    {
+      date: '3rd April, 2024',
+      title: 'Bootcamp Core',
+      subtitle: 'TheBridge',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'The most demanding part of the Bootcamp begins, an intense training program designed to bring out your full potential.',
+    },
+    {
+      date: '13th March, 2024',
+      title: 'Bootcamp Start',
+      subtitle: 'TheBridge',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'Start of the Bootcamp ramp-up, where I acquired the foundational knowledge needed to maximize the program and learn essential concepts and tools.',
+    },
+    {
+      date: '28th September, 2020 - 15th February, 2024',
+      title: 'Project Technician',
+      subtitle: '3dB Consult',
       type: 'work',  // Indica que este milestone es de trabajo
-
-      description: 'HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...'
+      description: 'Mobile Telephony Project Technician with experience in radio design across all technologies, including 2G and 3G rehoming, and radio link design. I have worked with operators such as Orange, Vodafone, Telefonica, and NOS (Portugal), as well as leading vendors like Ericsson, Huawei, and Nokia.',
     },
     {
-      date: '15th February, 2024',
-      title: 'Full Stack Developer',
-      subtitle: 'HashX',
-      type: 'study',  // Indica que este milestone es de trabajo
-
-      description: 'HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...HashX is dedicated to offering robust cybersecurity capabilities...'
-    },
-    {
-      date: '15th February, 2024',
-      title: 'Full Stack Developer',
-      subtitle: 'HashX',
-      description: 'HashX is dedicated to offering robust cybersecurity capabilities...'
-    },
-    {
-      date: '15th February, 2024',
-      title: 'Full Stack Developer',
-      subtitle: 'HashX',
-      description: 'HashX is dedicated to offering robust cybersecurity capabilities...'
-    },
-    {
-      date: '15th February, 2024',
-      title: 'Full Stack Developer',
-      subtitle: 'HashX',
-      description: 'HashX is dedicated to offering robust cybersecurity capabilities...'
+      date: '25th May, 2019',
+      title: 'Robotics and Industrial Automation',
+      subtitle: 'Bidebieta',
+      type: 'study',  // Indica que este milestone es de estudio
+      description: 'Completed a higher module, where I discovered my passion for technology and programming of automata and robots. I underwent 2 years of training learning to program Siemens and Omron PLCs and ABB and Mitsubishi robots.',
     },
   ];
+  
 
   const projects = [
     {

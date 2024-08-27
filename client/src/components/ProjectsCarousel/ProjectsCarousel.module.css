@@ -1,11 +1,28 @@
+/* ProjectsCarousel.module.css */
+.fondo {
+  background-color: #fff;
+}
 .container {
   margin: 0 auto;
   padding: 2rem;
   background-color: #fff;
+  opacity: 0; /* Inicialmente transparente */
+  transform: translateY(100px); /* Inicialmente desplazado hacia abajo */
+  transition: opacity 1s ease, transform 1s ease; /* Transiciones para opacidad y movimiento */
+}
+
+.visible {
+  opacity: 1; /* Opacidad completa cuando es visible */
+  transform: translateY(0); /* Regresa a su posición original */
+}
+
+.hidden {
+  opacity: 0; /* Transparente cuando deja de ser visible */
+  transform: translateY(100px); /* Desplazado hacia abajo cuando deja de ser visible */
 }
 
 .sectionTitle {
-  position: relative; /* Asegura que el pseudoelemento se posicione en relación con este contenedor */
+  position: relative;
   text-align: center;
   color: #68d372;
   margin-bottom: 60px;
@@ -13,14 +30,22 @@
 }
 
 .sectionTitle::before {
-  content: "";
-  width: 3px; /* Ancho de la línea vertical */
-  height: 200px; /* Altura de la línea vertical */
-  position: absolute;
-  background-color: #68d372;
-  top: -150px; /* Centra verticalmente la línea en el contenedor */
-  left: 50%; /* Colocado al inicio del contenedor */
-  transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
+  display: none;
+}
+
+/* Estilos para pantallas a partir de 1024px */
+@media (min-width: 1024px) {
+  .sectionTitle::before {
+    content: "";
+    width: 3px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    background-color: #68d372;
+    top: -110px;
+    left: 49.7%;
+    transform: translateY(-50%);
+  }
 }
 
 .swiperContainer {
@@ -28,13 +53,13 @@
 }
 
 .swiperSlide {
-  width: 450px; /* Aumenta el ancho de las tarjetas */
-  height: 700px; /* Aumenta la altura de las tarjetas */
+  width: 450px;
+  height: 700px;
   background-color: transparent;
 }
 
 .swiperSlide-active { 
-  transform: scale(1.1); /* Escala la tarjeta activa */
+  transform: scale(1.1);
 }
 
 .sliderController {
@@ -51,19 +76,19 @@
 }
 
 .swiperPaginationBullet {
-  background-color: #ccc !important; /* Gris para los bullets no activados */
-  width: 10px; /* Tamaño base de los bullets */
-  height: 10px; /* Tamaño base de los bullets */
-  border-radius: 50%; /* Asegura que los bullets sean redondos */
-  margin: 0 10px; /* Espaciado entre los bullets */
-  display: inline-block; /* Asegura que los bullets se comporten como elementos en línea */
-  transition: width 0.3s ease, height 0.3s ease; /* Transición suave para el cambio de tamaño */
+  background-color: #ccc !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  display: inline-block;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
 .swiperPaginationBulletActive {
-  background-color: #68d372 !important; /* Verde para el bullet activo */
-  width: 15px; /* Tamaño aumentado del bullet activo */
-  height: 15px; /* Tamaño aumentado del bullet activo */
+  background-color: #68d372 !important;
+  width: 15px;
+  height: 15px;
 }
 
 .sliderArrow {
@@ -72,10 +97,71 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 0 1rem;
-  transition: background-color 0.3s ease; /* Transición suave del color */
+  transition: background-color 0.3s ease;
 }
 
 .sliderArrow:active,
 .sliderArrow:focus {
-  background-color: #4caf50; /* Cambia el color a #68d372 cuando el botón está activo o enfocado */
+  background-color: #4caf50;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle::before {
+    height: 150px;
+    top: -100px;
+  }
+
+  .swiperSlide {
+    width: 300px;
+    height: 550px;
+  }
+
+  .swiperPaginationBullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+  }
+
+  .swiperPaginationBulletActive {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle::before {
+    height: 100px;
+    top: -70px;
+  }
+
+  .swiperSlide {
+    width: 250px;
+    height: 500px;
+  }
+
+  .swiperPaginationBullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 4px;
+  }
+
+  .swiperPaginationBulletActive {
+    width: 10px;
+    height: 10px;
+  }
 }

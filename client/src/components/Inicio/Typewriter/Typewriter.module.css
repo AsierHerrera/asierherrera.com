@@ -1,3 +1,4 @@
+/* Typewriter.module.css */
 .typewriter {
   display: inline-block;
   overflow: hidden;
@@ -5,28 +6,33 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 1em;
-  margin-top: 0; /* Elimina cualquier margen superior */
-  padding-top: 0; /* Elimina cualquier padding superior */
-  line-height: 1; /* Ajusta la altura de la línea */
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1;
 }
-
 
 .cursor {
   display: inline;
-  margin-left: 1px; /* Añade un pequeño margen a la izquierda del cursor */
-  -webkit-animation: Typewriter-cursor 1s infinite; /* Aplicar animación en WebKit */
-  animation: Typewriter-cursor 1s infinite; /* Aplicar la animación en otros navegadores */
-}
-
-/* Animación del cursor parpadeante */
-@-webkit-keyframes Typewriter-cursor {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  margin-left: 1px;
+  animation: Typewriter-cursor 1s infinite;
 }
 
 @keyframes Typewriter-cursor {
   0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .typewriter {
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 0.8em;
+  }
 }

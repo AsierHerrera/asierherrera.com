@@ -7,26 +7,32 @@
 .socialIcons {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Hace que el fondo sea circular */
-  padding: 10px; /* Ajusta el espacio interior alrededor del icono */
+  border-radius: 50%;
+  padding: 10px;
   transition: transform 0.3s ease;
 }
 
 .svgIcon {
   width: 40px;
   height: 40px;
-  color: #68d372; /* Cambia el color del icono */
+  color: #68d372;
 }
 
 .icon:hover .svgIcon {
   transition: 0.2s ease-in-out;
   transform: scale(1.1);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Aplica la transición tanto a la escala como a la sombra */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
 
+@media (max-width: 768px) {
+  .getInTouch {
+    width: 100%;
+  }
 }

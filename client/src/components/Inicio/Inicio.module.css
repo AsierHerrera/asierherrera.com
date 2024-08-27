@@ -1,68 +1,71 @@
-/* Contenedor general */
+/* Inicio.module.css */
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Cambiado de flex-start a center */
+    align-items: center;
     height: calc(80vh - 50px);
     padding: 0 50px 0 375px;
     background-color: #222222;
     color: white;
     font-family: "Poppins", sans-serif;
     margin-bottom: 0;
-    max-width:1600px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
 .textContainer {
     width: 50%;
-    padding-right: 20px; /* Añade un poco de espacio entre el texto y la imagen */
+    padding-right: 20px;
 }
 
 h1 {
     font-size: 5em;
-    font-weight: 1000; /* Incrementa el grosor del texto */
-    margin-bottom: 0; /* Elimina el margen inferior */
+    font-weight: 1000;
+    margin-bottom: 0;
     user-select: none;
 }
 
 .name {
     color: #68d372;
     font-size: 1.5em;
-    font-weight: 800; /* Incrementa el grosor del texto */
+    font-weight: 800;
     user-select: none;
-    position: relative; /* Necesario para posicionar ::before */
+    position: relative;
 }
 
 .myName::before {
-    content: "";
-    width: 130px;
-    height: 3px;
-    display: block;
-    background-color: #68d372;
-    position: absolute;
-    top: 30%; /* Ajusta esta posición según sea necesario */
-    transform: translateY(-50%); /* Centra verticalmente la línea */
-    left: -140px; /* Ajusta la distancia según sea necesario */
-}
+    display: none;
+  }
+  
+  /* Estilos para pantallas a partir de 1024px */
+  @media (min-width: 1024px) {
+    .myName::before {
+        content: "";
+        width: 130px;
+        height: 3px;
+        display: block;
+        background-color: #68d372;
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        left: -140px;
+    }
+  }
 
-
-
-/* Contenedor para Typewriter con altura fija */
 .typewriterWrapper {
-    height: 200px;
+    height: 150px;
     display: flex;
-    overflow: hidden; /* Evita que el texto que sobresale se muestre */
+    overflow: hidden;
     font-size: 4em;
-    font-weight: 800; /* Incrementa el grosor del texto */
+    font-weight: 800;
 }
 
-/* Tipo de letra */
 .role {
     font-size: 3em;
-    font-weight: 800; /* Ajusta el grosor del texto si es necesario */
-    white-space: nowrap; /* Evita el salto de línea dentro del elemento */
-    margin: 0; /* Asegúrate de eliminar cualquier margen que pueda afectar el espaciado */
-    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+    font-weight: 800;
+    white-space: nowrap;
+    margin: 0;
+    overflow: hidden;
     user-select: none;
 }
 
@@ -70,16 +73,14 @@ h1 {
     font-size: 1.2em;
     line-height: 1.6;
     color: #6e6e6ebb;
-    margin-bottom: 30px;
     margin-top: 0;
-    overflow: visible; /* Esto evita que el texto que sobresale se muestre */
-    font-weight: normal !important; /* Asegúrate de que el texto no esté en negrita */
+    overflow: visible;
+    font-weight: normal !important;
     user-select: none;
-
 }
 
 .introP {
-    font-weight: bold; /* Aplica negrita al texto con esta clase */
+    font-weight: bold;
     display: inline-block;
     transition: color 0.4s ease-in-out;
     color: #6E6E6E;
@@ -90,29 +91,14 @@ h1 {
     animation: rubberBand 1s;
 }
 
-/* Definición de la animación rubberBand */
 @keyframes rubberBand {
-    0% {
-        transform: scaleX(1) scaleY(1);
-    }
-    30% {
-        transform: scaleX(1.25) scaleY(0.75);
-    }
-    40% {
-        transform: scaleX(0.75) scaleY(1.25);
-    }
-    50% {
-        transform: scaleX(1.15) scaleY(0.85);
-    }
-    65% {
-        transform: scaleX(0.95) scaleY(1.05);
-    }
-    75% {
-        transform: scaleX(1.05) scaleY(0.95);
-    }
-    100% {
-        transform: scaleX(1) scaleY(1);
-    }
+    0% { transform: scaleX(1) scaleY(1); }
+    30% { transform: scaleX(1.25) scaleY(0.75); }
+    40% { transform: scaleX(0.75) scaleY(1.25); }
+    50% { transform: scaleX(1.15) scaleY(0.85); }
+    65% { transform: scaleX(0.95) scaleY(1.05); }
+    75% { transform: scaleX(1.05) scaleY(0.95); }
+    100% { transform: scaleX(1) scaleY(1); }
 }
 
 .buttons {
@@ -120,52 +106,40 @@ h1 {
     gap: 20px;
 }
 
-.cvDownload {
+.cvDownload, .contactButton {
     color: #ffffff;
     border: none;
-    background-color: #68d372;
-    padding: 15px 80px; /* Aumenta el padding para hacer el botón más grande */
-    border-radius: 6px; /* Aumenta el radio del borde para un botón más grande y redondeado */
+    padding: 15px 80px;
+    border-radius: 6px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: 1.3em; /* Aumenta el tamaño del texto */
-    font-weight: bold; /* Hace que el texto sea más negrita */
-    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
+    font-size: 1.3em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.cvDownload {
+    background-color: #68d372;
 }
 
 .contactButton {
-    color: #ffffff;
     border: 2px solid #68d372;
     background-color: transparent;
-    padding: 15px 80px; /* Asegura que el padding sea el mismo que el botón cvDownload */
-    border-radius: 6px; /* Aumenta el radio del borde para un botón más grande y redondeado */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3em; /* Aumenta el tamaño del texto */
-    font-weight: bold; /* Hace que el texto sea más negrita */
-    width: auto; /* Ajusta el ancho al contenido */
-    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
-    background-image: linear-gradient(to right, #68d372 50%, transparent 50%); /* Gradiente para la transición */
-    background-size: 200% 100%; /* Doble tamaño para la transición */
-    background-position: right bottom; /* Inicialmente el gradiente está a la derecha */
-    transition: background-position 0.3s ease-in-out; /* Transición de la posición del gradiente */
+    background-image: linear-gradient(to right, #68d372 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.3s ease-in-out;
 }
 
 .contactButton:hover {
-    background-position: left bottom; /* Cambia la posición del gradiente al pasar el ratón */
+    background-position: left bottom;
 }
 
 .icon {
     margin-right: 8px;
     font-size: 1.2em;
-    color: white; /* Asegúrate de que el icono sea blanco */
-}
-
-.contactButton:hover .icon {
-    color: white; /* Mantén el color blanco del icono al pasar el ratón */
+    color: white;
 }
 
 .imageContainer {
@@ -173,17 +147,86 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+    height: 100%;
 }
 
-.videoAnimation {
-    width: 100%;  /* Ajusta el tamaño según tus necesidades */
-    height: auto;  /* Mantiene la proporción del video */
-    border-radius: 50%; /* Hace que el video sea redondo */
-    object-fit: cover; /* Asegura que el video cubra el contenedor completamente */
-}
 .lottieAnimation {
     width: 100%;
-    max-width: 500px; /* Ajusta este valor según sea necesario */
+    max-width: 500px;
     height: auto;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .textContainer, .imageContainer {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .typewriterWrapper {
+        font-size: 3em;
+        height: 150px;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cvDownload, .contactButton {
+        padding: 15px 40px;
+        font-size: 1.1em;
+    }
+
+    .lottieAnimation {
+        max-width: 400px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .typewriterWrapper {
+        font-size: 2em;
+        height: 100px;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .cvDownload, .contactButton {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .lottieAnimation {
+        max-width: 300px;
+    }
+
+    .myName::before {
+        width: 80px;
+        left: -90px;
+    }
 }

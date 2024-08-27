@@ -25,7 +25,7 @@ const Typewriter = ({ texts, speed, deleteSpeed, pause }) => {
         setDisplayedText(text.substring(0, index + 1));
         index += 1;
         if (index >= text.length) {
-          setIsPaused(true);  // Pausa al final de la escritura
+          setIsPaused(true);
           setTimeout(() => {
             setIsPaused(false);
             setIsDeleting(true);
@@ -42,7 +42,7 @@ const Typewriter = ({ texts, speed, deleteSpeed, pause }) => {
   return (
     <span className={styles.typewriter}>
       {displayedText}
-      <span className={styles.cursor}>|</span> {/* El cursor ahora está dentro del span */}
+      <span className={styles.cursor}>|</span>
     </span>
   );
 };

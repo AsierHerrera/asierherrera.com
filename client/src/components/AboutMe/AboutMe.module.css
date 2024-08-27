@@ -8,38 +8,27 @@
   background-color: #fff;
   padding: 80px 0;
   border: none;
-  opacity: 0; /* Inicialmente transparente */
-  transform: translateY(100px); /* Inicialmente desplazado hacia abajo */
-  transition: opacity 1s ease, transform 1s ease; /* Transiciones para opacidad y movimiento */
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .fullWidthContainer.visible {
-  opacity: 1; /* Opacidad completa cuando es visible */
-  transform: translateY(0); /* Regresa a su posición original */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fullWidthContainer.hidden {
-  opacity: 0; /* Transparente cuando deja de ser visible */
-  transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .fullWidthContainer.hidden.up {
-  transform: translateY(-100px); /* Desplazado hacia arriba cuando deja de ser visible */
+  transform: translateY(-100px);
 }
 
 .fullWidthContainer.hidden.down {
-  transform: translateY(100px); /* Desplazado hacia abajo cuando deja de ser visible */
-}
-
-.sectionTitle::before {
-  content: "";
-  width: 3px; /* Ancho de la línea vertical */
-  height: 100%; /* Altura de la línea vertical, para que se ajuste al tamaño del texto */
-  display: block;
-  background-color: #68d372;
-  position: absolute;
-  top: 0; /* Ajusta según el posicionamiento deseado */
-  left: -150px; /* Ajusta esta posición según sea necesario */
+  transform: translateY(100px);
 }
 
 .contentContainer {
@@ -70,26 +59,34 @@
   max-width: 700px;
   font-size: 3em;
   flex: 1;
-  position: relative; /* Asegura que el posicionamiento absoluto de .Linea::before esté relativo a esta columna */
+  position: relative;
 }
 
 .Linea::before {
-  content: "";
-  width: 130px;
-  height: 3px;
-  display: block;
-  background-color: #68d372;
-  position: absolute;
-  top: -50px; /* Ajusta para colocar la línea en la parte superior de la columna */
-  transform: translateY(10px); /* Ajusta para mover la línea ligeramente hacia abajo si es necesario */
-  left: -150px; /* Ajusta esta posición según sea necesario para alinear con el texto */
+  display: none;
 }
+
+/* Estilos para pantallas a partir de 1024px */
+@media (min-width: 1024px) {
+  .Linea::before {
+    content: "";
+    width: 130px;
+    height: 3px;
+    display: block;
+    background-color: #68d372;
+    position: absolute;
+    top: -50px;
+    transform: translateY(10px);
+    left: -150px;
+  }
+}
+
 
 .stat {
   max-height: 175px;
   display: flex;
   align-items: center;
-  position: relative; /* Asegura que los elementos dentro de .stat se alineen en relación con esta clase */
+  position: relative;
 }
 
 .statTitle {
@@ -115,18 +112,18 @@
   margin-top: 0;
   margin-bottom: 30px;
   line-height: 1.2;
-  position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
+  position: relative;
 }
 
 .sectionTitle::before {
   content: "";
-  width: 3px; /* Ancho de la línea vertical */
-  height: 100%; /* Altura de la línea vertical, para que se ajuste al tamaño del texto */
+  width: 3px;
+  height: 100%;
   display: block;
   background-color: #68d372;
   position: absolute;
-  top: 0; /* Ajusta según el posicionamiento deseado */
-  left: -150px;
+  top: 0;
+  left: -25px;
 }
 
 .paragraph {
@@ -134,5 +131,78 @@
   margin-bottom: 20px;
   line-height: 1.8;
   font-size: 17px;
-  font-weight: 10 !important; /* Valor ajustado para un texto más fino */
+  font-weight: 300 !important;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .leftColumn, .rightColumn {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 3em;
+  }
+
+  .sectionTitle::before,
+  .Linea::before {
+    left: -20px;
+  }
+
+  .statTitle {
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .fullWidthContainer {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    gap: 30px;
+  }
+
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .statTitle {
+    font-size: 0.8em;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .paragraph {
+    font-size: 15px;
+  }
+
+  .sectionTitle::before,
+  .Linea::before {
+    left: -10px;
+  }
+
+  .Linea::before {
+    width: 80px;
+  }
 }
