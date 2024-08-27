@@ -81,8 +81,12 @@ function ProjectCarousel({ projects }) {
         <div className={styles.sliderController}>
           <div className={styles.swiperPagination}></div>
         </div>
+
       </Swiper>
+
+
     </div>
+
 
     </section>
     

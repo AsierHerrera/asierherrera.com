@@ -27,7 +27,7 @@
   text-align: center;
   color: #68d372;
   margin-bottom: 60px;
-  font-size: 36px;
+  font-size: 22px;
   position: relative;
 }
 
@@ -39,7 +39,7 @@
 @media (min-width: 1024px) {
   .title::before {
     content: "";
-    width: 4px;
+    width: 2px;
     height: 200px;
     display: block;
     position: absolute;
@@ -52,7 +52,7 @@
 
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 

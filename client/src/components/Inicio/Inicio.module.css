@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     height: calc(80vh - 50px);
-    padding: 0 50px 0 375px;
+    padding: 0 50px 0 325px;
     background-color: #222222;
     color: white;
     font-family: "Poppins", sans-serif;
@@ -14,12 +14,12 @@
 }
 
 .textContainer {
-    width: 50%;
+    width: 40%;
     padding-right: 20px;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 1000;
     margin-bottom: 0;
     user-select: none;
@@ -46,8 +46,7 @@ h1 {
         display: block;
         background-color: #68d372;
         position: absolute;
-        top: 30%;
-        transform: translateY(-50%);
+        top: 50%;
         left: -140px;
     }
   }
@@ -70,7 +69,7 @@ h1 {
 }
 
 .description {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.6;
     color: #6e6e6ebb;
     margin-top: 0;
@@ -109,12 +108,12 @@ h1 {
 .cvDownload, .contactButton {
     color: #ffffff;
     border: none;
-    padding: 15px 80px;
+    padding: 10px 55px;
     border-radius: 6px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -124,7 +123,7 @@ h1 {
 }
 
 .contactButton {
-    border: 3px solid #68d372;
+    border: 2px solid #68d372;
     background-color: transparent;
     background-image: linear-gradient(to right, #68d372 50%, transparent 50%);
     background-size: 200% 100%;
@@ -152,45 +151,72 @@ h1 {
 }
 
 .lottieAnimation {
-    width: 100%;
+    width: 60%;
     max-width: 500px;
     height: auto;
-}
+    }
+    @media (min-width: 1024px) {
+        .lottieAnimation {
+            padding-right: 150px;
 
-/* Tablet Styles */
+        }
+      
+    }
+
+/* Estilos para tablet */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
         height: auto;
         padding: 50px 20px;
+        text-align: center; /* Centra el texto en el contenedor */
     }
 
-    .textContainer, .imageContainer {
+    .textContainer {
         width: 100%;
         padding-right: 0;
+        margin-bottom: 30px; /* Añade margen inferior para separar del contenido de la imagen */
+    }
+
+    .imageContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra la imagen */
     }
 
     h1 {
         font-size: 4em;
+        margin: 0; /* Elimina el margen para centrar correctamente */
     }
 
     .typewriterWrapper {
         font-size: 3em;
         height: 150px;
+        margin: 20px 0; /* Añade margen arriba y abajo para separar del texto */
+        display: flex;
+        justify-content: center; /* Centra el contenido del typewriterWrapper */
+        align-items: center; /* Alinea verticalmente el contenido del typewriterWrapper */
     }
 
     .description {
+        padding: 30px;
         font-size: 1em;
+        margin: 20px 0; /* Añade margen arriba y abajo para separar del texto */
     }
 
     .buttons {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center; /* Centra los botones en el contenedor */
+        gap: 20px; /* Añade espacio entre los botones */
+        margin-top: 20px; /* Añade espacio superior para separar de otros elementos */
     }
 
     .cvDownload, .contactButton {
-        padding: 15px 40px;
+        padding: 15px 40px; /* Ajusta el padding para un tamaño adecuado y uniforme */
         font-size: 1.1em;
+        width: 100%; /* Asegura que los botones tengan el mismo ancho */
+        max-width: 300px; /* Limita el ancho máximo de los botones */
+        box-sizing: border-box; /* Incluye el padding en el ancho total del botón */
     }
 
     .lottieAnimation {
@@ -198,28 +224,57 @@ h1 {
     }
 }
 
-/* Mobile Styles */
+/* Estilos para móvil */
 @media (max-width: 768px) {
     .container {
         padding: 30px 15px;
+        text-align: center; /* Centra el texto en el contenedor */
+    }
+
+    .textContainer {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px; /* Añade margen inferior para separar del contenido de la imagen */
+    }
+
+    .imageContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra la imagen */
     }
 
     h1 {
         font-size: 3em;
+        margin: 0; /* Elimina el margen para centrar correctamente */
     }
 
     .typewriterWrapper {
         font-size: 2em;
         height: 100px;
+        margin: 20px 0; /* Añade margen arriba y abajo para separar del texto */
+        display: flex;
+        justify-content: center; /* Centra el contenido del typewriterWrapper */
+        align-items: center; /* Alinea verticalmente el contenido del typewriterWrapper */
     }
 
     .description {
         font-size: 0.9em;
+        margin: 20px 0; /* Añade margen arriba y abajo para separar del texto */
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center; /* Centra los botones en el contenedor */
+        gap: 20px; /* Añade espacio entre los botones */
+        margin-top: 20px; /* Añade espacio superior para separar de otros elementos */
     }
 
     .cvDownload, .contactButton {
-        padding: 12px 30px;
+        padding: 12px 30px; /* Ajusta el padding para un tamaño adecuado y uniforme */
         font-size: 1em;
+        width: 100%; /* Asegura que los botones tengan el mismo ancho */
+        max-width: 300px; /* Limita el ancho máximo de los botones */
+        box-sizing: border-box; /* Incluye el padding en el ancho total del botón */
     }
 
     .lottieAnimation {

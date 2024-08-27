@@ -17,20 +17,21 @@
 }
 
 .content {
-  padding: 1.5rem;
+  padding: 1rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
   color: #333;
 }
 
 .description {
+  font-family: sans-serif;
+  line-height: 1.3;
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;

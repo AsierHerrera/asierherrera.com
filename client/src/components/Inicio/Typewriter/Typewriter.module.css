@@ -27,6 +27,7 @@
 @media (max-width: 1024px) {
   .typewriter {
     font-size: 0.9em;
+    text-align: center;
   }
 }
 
@@ -34,5 +35,6 @@
 @media (max-width: 768px) {
   .typewriter {
     font-size: 0.8em;
+    text-align: center;
   }
 }

@@ -1,7 +1,7 @@
 .quickLinks h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
   color: #333;
 }
@@ -19,7 +19,7 @@
 .quickLinks a {
   color: #666;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .quickLinks a:hover {

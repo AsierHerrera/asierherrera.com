@@ -42,10 +42,8 @@
   
   .sectionTitle {
     color: #68d372;
-    font-size: 28px; /* Aumentado */
-    text-transform: uppercase;
+    font-size: 22px; /* Aumentado */
     font-weight: normal;
-    padding-left: 50px; /* Espacio para la línea */
     margin: 0; /* Asegura que no haya márgenes adicionales */
   }
   
@@ -58,13 +56,13 @@
   @media (min-width: 1024px) {
     .sectionTitle::before {
       content: "";
-      width: 3px; /* Ancho de la línea vertical */
+      width: 2px; /* Ancho de la línea vertical */
       height: 200px; /* Altura de la línea vertical */
       display: block;
       position: absolute;
       background-color: #68d372;
       top: -110px; /* Centra verticalmente la línea en el contenedor */
-      left: 65%; /* Colocado al inicio del contenedor */
+      left: 50%; /* Colocado al inicio del contenedor */
       transform: translateY(-50%); /* Ajusta para centrarse verticalmente */
     }
   }
@@ -72,7 +70,8 @@
     color: rgb(200, 200, 200);
     font-weight: 600;
     text-align: left;
-    font-size: 1.75em;
+    font-size: 1.5em;
+    letter-spacing: 1px;
     margin-top: 40px; /* Aumentado */
     margin-left: 3%; /* Aumentado */
   }

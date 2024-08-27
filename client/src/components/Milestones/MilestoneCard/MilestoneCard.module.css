@@ -8,11 +8,13 @@
 }
 
 .milestoneCard:nth-child(odd) {
+  border-top-left-radius: 0;
   left: 0;
 }
 
 .milestoneCard:nth-child(even) {
   left: 50%;
+  
 }
 
 .milestoneCard::after {
@@ -25,6 +27,7 @@
   border: 2px solid #68d372;
   top: 15px;
   border-radius: 50%;
+
   z-index: 1;
   transition: 0.2s ease-in-out;
 }
@@ -38,34 +41,41 @@
 }
 
 .date {
+  
   color: #6E6E6E;
   font-size: 18px;
   margin-bottom: 5px;
 }
 
 .date::before {
+  content: "\f783";
+  color:#68d372;
   position: relative;
   margin-right: 10px;
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
 }
 
-.date.study::before {
+.title.study::before {
   content: "\f19d";
   color: #222222;
+  font-family: "Font Awesome 5 Free";
+  margin-right: 10px;
   -webkit-text-stroke: 1px #68d372;
 }
 
-.date.work::before {
+.title.work::before {
   content: "\f0b1";
   color: #222222;
+  font-family: "Font Awesome 5 Free";
+  margin-right: 10px;
   -webkit-text-stroke: 1px #68d372;
 }
 
 .content {
   padding: 15px;
   background-color: #222222;
-  border: 1px solid #68d372;
+  border: 2px solid #68d372;
   border-radius: 15px;
   height: 100%;
 }
@@ -83,7 +93,7 @@
 
 .description {
   color: #6E6E6E;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -93,7 +103,7 @@
   }
 
   .milestoneCard::after {
-    left: -39px !important;
+    display: none;
   }
 }
 
@@ -102,10 +112,12 @@
     width: calc(100% - 50px);
     left: 50px !important;
     padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
   }
 
   .milestoneCard::after {
-    left: -34px !important;
+    display: none;
   }
 
   .content {

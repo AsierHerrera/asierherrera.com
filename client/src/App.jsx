@@ -66,10 +66,9 @@ function App() {
       title: 'Robotics and Industrial Automation',
       subtitle: 'Bidebieta',
       type: 'study',  // Indica que este milestone es de estudio
-      description: 'Completed a higher module, where I discovered my passion for technology and programming of automata and robots. I underwent 2 years of training learning to program Siemens and Omron PLCs and ABB and Mitsubishi robots.',
+      description: 'Completed a higher module, where I discovered my passion for technology and programming of automata and robots. I spent 2 years learning to program Siemens and Omron PLCs as well as ABB and Mitsubishi robots.',
     },
-  ];
-  
+  ];  
 
   const projects = [
     {

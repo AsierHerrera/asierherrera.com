@@ -1,7 +1,7 @@
 .divCard {
     position: relative;
-    width: 100px; /* Aumentado */
-    height: 100px; /* Aumentado */
+    width: 90px; /* Aumentado */
+    height: 90px; /* Aumentado */
     margin-bottom: 20px; /* Aumentado */
     margin-left: 20px;
     margin-right: 20px;
@@ -22,8 +22,8 @@
   
   .divCardItem {
     position: absolute;
-    width: 70px; /* Aumentado */
-    height: 70px; /* Aumentado */
+    width: 65px; /* Aumentado */
+    height: 65px; /* Aumentado */
     border-radius: 4px;
     top: 50%;
     left: 50%;
@@ -37,7 +37,7 @@
     display: table;
     color: #6e6e6e;
     font-size: 18px; /* Aumentado */
-    margin-top: 110px; /* Aumentado */
+    margin-top: 100px; /* Aumentado */
     margin-left: auto;
     margin-right: auto;
     transition: color 0.3s ease;
