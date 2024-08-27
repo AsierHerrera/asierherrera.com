@@ -12,6 +12,22 @@ function Inicio() {
         "DevOps Enthusiast",
     ];
 
+    const handleLinkClick = (href, offset = 0) => {
+        const element = document.querySelector(href);
+        const isDesktop = window.innerWidth >= 1024;
+    
+        if (element) {
+          const scrollPosition = isDesktop ? element.offsetTop - offset : element.offsetTop;
+          
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth', // Desplazamiento suave
+          });
+          
+          setIsMenuOpen(false);
+        }
+      };
+
     return (
         <div id="inicio" className={styles.container}>
             <div className={styles.textContainer}>
@@ -47,7 +63,7 @@ function Inicio() {
                         Download CV
                     </button>
 
-                    <button className={styles.contactButton} onClick={() => window.location.href = '#contact'}>
+                    <button className={styles.contactButton} onClick={() => handleLinkClick("#contact", 100)}>
                         <i className={`fas fa-envelope ${styles.icon}`}></i>
                         Contact Me
                     </button>

@@ -39,7 +39,7 @@
 @media (min-width: 1024px) {
   .title::before {
     content: "";
-    width: 3px;
+    width: 4px;
     height: 200px;
     display: block;
     position: absolute;
